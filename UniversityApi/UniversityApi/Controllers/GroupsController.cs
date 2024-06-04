@@ -3,16 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using UniversityApi.Data.Entities;
 using UniversityApi.Dtos.GroupDtos;
+using UniversityApi.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace UniversityApi.Controllers
 {
     [Route("api/[controller]")]
-    public class GroupsController : Controller
+    [ApiController]
+    public class GroupsController : ControllerBase
     {
+        private readonly UniversityDbContext _dbContext;
+
+        public GroupsController(UniversityDbContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
 
         public static List<Group> groups = new List<Group>();
         public GroupsController()
@@ -38,32 +47,110 @@ namespace UniversityApi.Controllers
             };
         }
         [HttpGet("")]
-        public ActionResult<List<GroupGetDto>> GetAll()
+        public async Task<ActionResult<IEnumerable<GroupGetDto>>> GetAll()
         {
-            List<GroupGetDto> dtos = groups.Select(x => new GroupGetDto {
+            if (_dbContext.Groups==null)
+            {
+                return NotFound();
+            }
+            var groups = await _dbContext.Groups.ToListAsync();
+            var dtos = groups.Select(x => new GroupGetDto
+            {
                 Id = x.Id,
                 No = x.No,
                 Limit = x.Limit
             }).ToList();
-            return StatusCode(200, dtos);
+            return StatusCode(200,dtos);
         }
 
+
         [HttpGet("{id}")]
-        public ActionResult<GroupGetDto> GetById(int id)
+        public async Task<ActionResult<GroupGetDto>> GetById(int id)
         {
-            var data = groups.Find(x => x.Id == id);
-            if (data == null)
+            if (_dbContext.Groups == null)
             {
-                return StatusCode(404);
+                return NotFound();
             }
-            GroupGetDto dto = new GroupGetDto
+            var group = await _dbContext.Groups.FindAsync(id);
+            if (group == null)
             {
-                Id = data.Id,
-                No = data.No,
-                Limit = data.Limit
+                return NotFound();
+            }
+
+            var dto = new GroupGetDto
+            {
+                Id = group.Id,
+                No = group.No,
+                Limit = group.Limit
             };
-            return StatusCode(200,dto);
+            return StatusCode(201, dto);
         }
+
+
+        [HttpPost("")]
+        public async Task<ActionResult<GroupGetDto>> Create([FromBody] GroupCreateDto createDto)
+        {
+            var newGroup = new Group
+            {
+                No = createDto.No,
+                Limit = createDto.Limit,
+                CreatedAt = DateTime.Now,
+                ModifiedAt = DateTime.Now
+            };
+
+            _dbContext.Groups.Add(newGroup);
+            await _dbContext.SaveChangesAsync();
+
+            var dto = new GroupGetDto
+            {
+                Id = newGroup.Id,
+                No = newGroup.No,
+                Limit = newGroup.Limit
+            };
+
+            return CreatedAtAction(nameof(GetById), new { id = newGroup.Id }, dto);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<GroupGetDto>> Update(int id, [FromBody] GroupUpdateDto updateDto)
+        {
+            var group = await _dbContext.Groups.FindAsync(id);
+            if (group == null)
+            {
+                return NotFound();
+            }
+
+            group.No = updateDto.No;
+            group.Limit = updateDto.Limit;
+            group.ModifiedAt = DateTime.Now;
+
+            _dbContext.Groups.Update(group);
+            await _dbContext.SaveChangesAsync();
+
+            var dto = new GroupGetDto
+            {
+                Id = group.Id,
+                No = group.No,
+                Limit = group.Limit
+            };
+
+            return Ok(dto);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var group = await _dbContext.Groups.FindAsync(id);
+            if (group == null)
+            {
+                return NotFound();
+            }
+
+            _dbContext.Groups.Remove(group);
+            await _dbContext.SaveChangesAsync();
+            return NoContent();
+        }
+
         // GET: api/values
         //[HttpGet]
         //public IEnumerable<string> Get()
@@ -94,7 +181,8 @@ namespace UniversityApi.Controllers
         //[HttpDelete("{id}")]
         //public void Delete(int id)
         //{
-        //}
+        //},
     }
 }
+
 
