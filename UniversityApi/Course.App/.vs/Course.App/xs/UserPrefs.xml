@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{11D85175-89A8-4A75-BC9A-DE472B6D8407}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Course.API/appsettings.json">
+    <Files>
+      <File FileName="Course.Core/Entities/Group.cs" />
+      <File FileName="Course.Core/Entities/BaseEntity.cs" Line="2" Column="31" />
+      <File FileName="Course.Core/Entities/AuditEntity.cs" Line="12" Column="1" />
+      <File FileName="Course.API/appsettings.json" Line="12" Column="1" />
+      <File FileName="Course.API/Program.cs" Line="20" Column="40" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Course.App" expanded="True" selected="True">
+            <Node name="Course.API" expanded="True" />
+            <Node name="Course.Core" expanded="True">
+              <Node name="Entities" expanded="True" />
+            </Node>
+            <Node name="Course.Data">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Course.API FirstBuild="True" PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

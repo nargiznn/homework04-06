@@ -1,40 +1,44 @@
 ﻿<Properties StartupConfiguration="{0A716079-2731-482A-9044-2B15057C9EEE}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.UniversityApi PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="UniversityApi/appsettings.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UniversityApi/Controllers/GroupsController.cs">
     <Files>
-      <File FileName="UniversityApi/Data/Entities/Group.cs" Line="14" Column="1" />
-      <File FileName="UniversityApi/Controllers/GroupsController.cs" Line="54" Column="15" />
-      <File FileName="UniversityApi/Dtos/GroupDtos/GroupGetDto.cs" Line="1" Column="1" />
-      <File FileName="UniversityApi/Dtos/GroupDtos/GroupCreateDto.cs" Line="7" Column="40" />
-      <File FileName="UniversityApi/Dtos/GroupDtos/GroupUpdateDto.cs" Line="11" Column="1" />
-      <File FileName="UniversityApi/Program.cs" Line="1" Column="1" />
-      <File FileName="UniversityApi/appsettings.json" Line="1" Column="1" />
+      <File FileName="UniversityApi/Controllers/GroupsController.cs" Line="91" Column="47" />
+      <File FileName="UniversityApi/Dtos/GroupDtos/GroupCreateDto.cs" Line="19" Column="6" />
+      <File FileName="UniversityApi/Data/Entities/AuditEntity.cs" Line="6" Column="64" />
+      <File FileName="UniversityApi/Program.cs" Line="18" Column="31" />
+      <File FileName="UniversityApi/Data/Entities/Student.cs" Line="14" Column="1" />
+      <File FileName="UniversityApi/Data/Configurations/StudentConfiguration.cs" Line="15" Column="10" />
+      <File FileName="UniversityApi/Data/Entities/Group.cs" Line="13" Column="1" />
+      <File FileName="UniversityApi/Data/UniversityDbContext.cs" Line="7" Column="2" />
+      <File FileName="UniversityApi/Data/Configurations/GroupConfiguration.cs" Line="17" Column="6" />
+      <File FileName="UniversityApi/Dtos/GroupDtos/GroupUpdateDto.cs" Line="8" Column="39" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="UniversityApi" expanded="True">
-            <Node name="UniversityApi">
+          <Node name="UniversityApi">
+            <Node name="UniversityApi" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True">
+                <Node name="Configurations" expanded="True" />
                 <Node name="Entities" expanded="True" />
               </Node>
               <Node name="Dtos" expanded="True">
                 <Node name="GroupDtos" expanded="True" />
               </Node>
-              <Node name="Migrations" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="appsettings.json" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.UniversityApi PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MultiItemStartupConfigurations />
 </Properties>
