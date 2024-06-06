@@ -21,7 +21,7 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Course.Data\Course.Data.csproj">
+    <ProjectReference Include="..\Course.Service\Course.Service.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
