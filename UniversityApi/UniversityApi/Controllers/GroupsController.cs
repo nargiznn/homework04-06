@@ -26,12 +26,13 @@ namespace UniversityApi.Controllers
         [HttpGet("")]
         public ActionResult<List<GroupGetDto>> GetAll()
         {
-            List<GroupGetDto> dtos = _dbContext.Groups.Select(x => new GroupGetDto
+            List<GroupGetDto> dtos = _dbContext.Groups.Where(x => !x.IsDeleted).Select(x => new GroupGetDto
             {
                 Id = x.Id,
                 No = x.No,
                 Limit = x.Limit
             }).ToList();
+
 
             return StatusCode(200, dtos);
         }
@@ -74,35 +75,40 @@ namespace UniversityApi.Controllers
         [HttpPut("{id}")]
         public ActionResult Update(int id, GroupUpdateDto updateDto)
         {
-            var group = _dbContext.Groups.Find(id);
+            var group = _dbContext.Groups.FirstOrDefault(x => x.Id == id && !x.IsDeleted);
             if (group == null)
             {
                 return StatusCode(404);
             }
+            if (group.No != updateDto.No && _dbContext.Groups.Any(x => x.No == updateDto.No && !x.IsDeleted))
+                return Conflict();
+
 
             group.No = updateDto.No;
             group.Limit = updateDto.Limit;
             group.ModifiedAt = DateTime.Now;
 
-            _dbContext.Groups.Update(group);
+            //_dbContext.Groups.Update(group);
             _dbContext.SaveChangesAsync();
 
+            return NoContent();
 
-            return StatusCode(200);
+
         }
 
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
-            var group = _dbContext.Groups.Find(id);
+            var group = _dbContext.Groups.FirstOrDefault(x => x.Id == id && !x.IsDeleted);
             if (group == null)
             {
                 return StatusCode(404);
             }
+            group.IsDeleted = true;
+            //_dbContext.Groups.Remove(group);
+          _dbContext.SaveChanges();
+            return NoContent();
 
-            _dbContext.Groups.Remove(group);
-          _dbContext.SaveChangesAsync();
-             return StatusCode(200);
         }
 
         // GET: api/values
