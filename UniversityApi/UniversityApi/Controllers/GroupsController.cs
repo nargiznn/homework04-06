@@ -39,7 +39,7 @@ namespace UniversityApi.Controllers
         [HttpGet("{id}")]
         public ActionResult<GroupGetDto> GetById(int id)
         {
-            var data = _dbContext.Groups.FirstOrDefault(x => x.Id == id);
+            var data = _dbContext.Groups.FirstOrDefault(x => x.Id == id && !x.IsDeleted);
 
             if (data == null)
             {
@@ -59,18 +59,16 @@ namespace UniversityApi.Controllers
         [HttpPost("")]
         public ActionResult Create(GroupCreateDto createDto)
         {
-            var newGroup = new Group
+            if (_dbContext.Groups.Any(x => x.No == createDto.No && !x.IsDeleted))  return StatusCode(409);
+            var entity = new Group
             {
-                No = createDto.No,
                 Limit = createDto.Limit,
-                CreatedAt = DateTime.Now,
-             
+                No = createDto.No
             };
-
-            _dbContext.Groups.Add(newGroup);
+            _dbContext.Groups.Add(entity);
             _dbContext.SaveChangesAsync();
 
-            return StatusCode(200);
+            return StatusCode(201, new { Id = entity.Id });
         }
 
         [HttpPut("{id}")]

@@ -1,5 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using UniversityApi.Models;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using UniversityApi.Dtos.GroupDtos;
+using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +17,11 @@ builder.Services.AddDbContext<UniversityDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddFluentValidationClientsideAdapters();
+builder.Services.AddValidatorsFromAssemblyContaining<GroupCreateDtoValidator>();
+
+builder.Services.AddFluentValidationRulesToSwagger();
 
 var app = builder.Build();
 

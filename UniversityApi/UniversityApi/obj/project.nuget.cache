@@ -1,10 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "iOlZWHCM9eRTieMocjokVyY9xS50qW4GjrdPCzT489nv5g2zY2ffkbLoyq2zArH9APVMm4Z+8VPxj7HK/GW4iw==",
+  "dgSpecHash": "CDlkvWpgklFlvSMFgBjmEDd/5/Axflx/V7PnJsQGNTtNNXAeAXfiSu+pznElbpksSh5UehL4yBq84KnC2TNbYA==",
   "success": true,
   "projectFilePath": "/Users/nergiznadirli/Desktop/APİ/04-06-24/UniversityApi/UniversityApi/UniversityApi.csproj",
   "expectedPackageFiles": [
+    "/Users/nergiznadirli/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512",
+    "/Users/nergiznadirli/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "/Users/nergiznadirli/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.5.1/fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
+    "/Users/nergiznadirli/.nuget/packages/microelements.openapi.fluentvalidation/6.0.0/microelements.openapi.fluentvalidation.6.0.0.nupkg.sha512",
+    "/Users/nergiznadirli/.nuget/packages/microelements.swashbuckle.fluentvalidation/6.0.0/microelements.swashbuckle.fluentvalidation.6.0.0.nupkg.sha512",
+    "/Users/nergiznadirli/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.1.0/microsoft.aspnetcore.http.abstractions.2.1.0.nupkg.sha512",
+    "/Users/nergiznadirli/.nuget/packages/microsoft.aspnetcore.http.features/2.1.0/microsoft.aspnetcore.http.features.2.1.0.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/microsoft.data.sqlclient/2.1.7/microsoft.data.sqlclient.2.1.7.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/microsoft.data.sqlclient.sni.runtime/2.1.1/microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
@@ -52,6 +59,7 @@
     "/Users/nergiznadirli/.nuget/packages/system.security.permissions/4.7.0/system.security.permissions.4.7.0.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/system.security.principal.windows/4.7.0/system.security.principal.windows.4.7.0.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/system.text.encoding.codepages/4.7.0/system.text.encoding.codepages.4.7.0.nupkg.sha512",
+    "/Users/nergiznadirli/.nuget/packages/system.text.encodings.web/4.5.0/system.text.encodings.web.4.5.0.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/system.windows.extensions/4.7.0/system.windows.extensions.4.7.0.nupkg.sha512"
   ],
   "logs": []

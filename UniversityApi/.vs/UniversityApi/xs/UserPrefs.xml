@@ -1,4 +1,40 @@
 ﻿<Properties StartupConfiguration="{0A716079-2731-482A-9044-2B15057C9EEE}|Default">
-  <MonoDevelop.Ide.ItemProperties.UniversityApi FirstBuild="True" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.UniversityApi PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="UniversityApi/appsettings.json">
+    <Files>
+      <File FileName="UniversityApi/Data/Entities/Group.cs" Line="14" Column="1" />
+      <File FileName="UniversityApi/Controllers/GroupsController.cs" Line="54" Column="15" />
+      <File FileName="UniversityApi/Dtos/GroupDtos/GroupGetDto.cs" Line="1" Column="1" />
+      <File FileName="UniversityApi/Dtos/GroupDtos/GroupCreateDto.cs" Line="7" Column="40" />
+      <File FileName="UniversityApi/Dtos/GroupDtos/GroupUpdateDto.cs" Line="11" Column="1" />
+      <File FileName="UniversityApi/Program.cs" Line="1" Column="1" />
+      <File FileName="UniversityApi/appsettings.json" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="UniversityApi" expanded="True">
+            <Node name="UniversityApi">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True">
+                <Node name="Entities" expanded="True" />
+              </Node>
+              <Node name="Dtos" expanded="True">
+                <Node name="GroupDtos" expanded="True" />
+              </Node>
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
 </Properties>
