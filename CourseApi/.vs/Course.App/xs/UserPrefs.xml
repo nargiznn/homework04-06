@@ -1,19 +1,30 @@
 ﻿<Properties StartupConfiguration="{11D85175-89A8-4A75-BC9A-DE472B6D8407}|Default">
-  <MonoDevelop.Ide.ItemProperties.Course.Service FirstBuild="True" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Course.API PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Course.API/Controllers/GroupsController.cs">
+    <Files>
+      <File FileName="Course.API/Controllers/GroupsController.cs" Line="59" Column="14" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Course.App" expanded="True" selected="True">
-            <Node name="Course.API" expanded="True" />
+          <Node name="Course.App" expanded="True">
+            <Node name="Course.API">
+              <Node name="Controllers" expanded="True">
+                <Node name="GroupsController.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="Course.Data">
+              <Node name="Migrations" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Course.API PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

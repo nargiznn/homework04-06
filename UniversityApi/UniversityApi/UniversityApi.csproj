@@ -24,6 +24,7 @@
     <None Remove="Dtos\" />
     <None Remove="Dtos\GroupDtos\" />
     <None Remove="Data\Configurations\" />
+    <None Remove="Dtos\StudentDtos\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -32,5 +33,6 @@
     <Folder Include="Dtos\" />
     <Folder Include="Dtos\GroupDtos\" />
     <Folder Include="Data\Configurations\" />
+    <Folder Include="Dtos\StudentDtos\" />
   </ItemGroup>
 </Project>

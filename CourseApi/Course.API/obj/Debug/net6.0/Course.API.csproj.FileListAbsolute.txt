@@ -119,8 +119,10 @@
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/bin/Debug/net6.0/Course.Core.dll
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/bin/Debug/net6.0/Course.Data.dll
-/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/bin/Debug/net6.0/Course.Data.pdb
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/bin/Debug/net6.0/Course.Service.dll
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/bin/Debug/net6.0/Course.Service.pdb
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/bin/Debug/net6.0/Course.Core.pdb
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/bin/Debug/net6.0/Course.Data.pdb
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/obj/Debug/net6.0/Course.API.csproj.AssemblyReference.cache
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/obj/Debug/net6.0/Course.API.GeneratedMSBuildEditorConfig.editorconfig
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/obj/Debug/net6.0/Course.API.AssemblyInfoInputs.cache
@@ -136,9 +138,9 @@
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/obj/Debug/net6.0/staticwebassets.build.json
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/obj/Debug/net6.0/staticwebassets.development.json
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/obj/Debug/net6.0/scopedcss/bundle/Course.API.styles.css
-/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/obj/Debug/net6.0/Course.API.csproj.CopyComplete
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/obj/Debug/net6.0/Course.API.dll
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/obj/Debug/net6.0/refint/Course.API.dll
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/obj/Debug/net6.0/Course.API.pdb
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/obj/Debug/net6.0/Course.API.genruntimeconfig.cache
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/obj/Debug/net6.0/ref/Course.API.dll
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/obj/Debug/net6.0/Course.API.csproj.CopyComplete

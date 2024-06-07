@@ -25,7 +25,6 @@
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Core/bin/Debug/net6.0/Course.Core.deps.json
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Core/bin/Debug/net6.0/Course.Core.dll
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Core/bin/Debug/net6.0/Course.Core.pdb
-/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Core/obj/Debug/net6.0/Course.Core.csproj.AssemblyReference.cache
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Core/obj/Debug/net6.0/Course.Core.GeneratedMSBuildEditorConfig.editorconfig
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Core/obj/Debug/net6.0/Course.Core.AssemblyInfoInputs.cache
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Core/obj/Debug/net6.0/Course.Core.AssemblyInfo.cs
@@ -34,3 +33,4 @@
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Core/obj/Debug/net6.0/refint/Course.Core.dll
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Core/obj/Debug/net6.0/Course.Core.pdb
 /Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Core/obj/Debug/net6.0/ref/Course.Core.dll
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Core/obj/Debug/net6.0/Course.Core.sourcelink.json

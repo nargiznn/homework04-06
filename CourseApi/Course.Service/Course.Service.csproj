@@ -11,12 +11,16 @@
     <None Remove="Dtos\" />
     <None Remove="Services\Implementations\" />
     <None Remove="Exceptions\" />
+    <None Remove="Services\Interfaces\" />
+    <None Remove="Dtos\Group\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="Dtos\" />
     <Folder Include="Services\Implementations\" />
     <Folder Include="Exceptions\" />
+    <Folder Include="Services\Interfaces\" />
+    <Folder Include="Dtos\Group\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Course.Data\Course.Data.csproj" />

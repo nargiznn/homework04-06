@@ -4,9 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Course.Core.Entities;
 using Course.Service.Dtos;
+using Course.Service.Dtos.Group;
 using Course.Service.Exceptions;
 using Course.Service.Services;
+using Course.Service.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -39,38 +42,38 @@ namespace Course.API.Controllers
                 return StatusCode(500, "Error");
             }
         }
+        public ActionResult Update(int id, GroupUpdateDto updateDto)
+        {
+            try
+            {
+                var result = _groupService.Update(id, updateDto);
+                if (result)
+                {
+                    return NoContent(); 
+                }
+                return NotFound(); 
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "Error"); 
+            }
+        }
 
 
-        //// GET: api/values
-        //[HttpGet]
-        //public IEnumerable<string> Get()
-        //{
-        //    return new string[] { "value1", "value2" };
-        //}
-
-        //// GET api/values/5
-        //[HttpGet("{id}")]
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
-
-        //// POST api/values
-        //[HttpPost]
-        //public void Post([FromBody]string value)
-        //{
-        //}
-
-        //// PUT api/values/5
         //[HttpPut("{id}")]
-        //public void Put(int id, [FromBody]string value)
+        //public ActionResult Update(int id, GroupUpdateDto updateDto)
         //{
-        //}
+        //    var entity = _context.Groups.FirstOrDefault(x => x.Id == id && !x.IsDeleted);
+        //    if (entity == null) return NotFound();
 
-        //// DELETE api/values/5
-        //[HttpDelete("{id}")]
-        //public void Delete(int id)
-        //{
+        //    if (entity.No != updateDto.No && _context.Groups.Any(x => x.No == updateDto.No && !x.IsDeleted))
+        //        return Conflict();
+
+        //    entity.No = updateDto.No;
+        //    entity.Limit = updateDto.Limit;
+
+        //    _context.SaveChanges();
+        //    return NoContent();
         //}
     }
 }

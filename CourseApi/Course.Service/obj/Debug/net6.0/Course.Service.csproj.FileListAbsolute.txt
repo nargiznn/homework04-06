@@ -1,0 +1,17 @@
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/bin/Debug/net6.0/Course.Service.deps.json
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/bin/Debug/net6.0/Course.Service.dll
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/bin/Debug/net6.0/Course.Service.pdb
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/bin/Debug/net6.0/Course.Core.dll
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/bin/Debug/net6.0/Course.Data.dll
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/bin/Debug/net6.0/Course.Data.pdb
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/bin/Debug/net6.0/Course.Core.pdb
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/obj/Debug/net6.0/Course.Service.csproj.AssemblyReference.cache
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/obj/Debug/net6.0/Course.Service.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/obj/Debug/net6.0/Course.Service.AssemblyInfoInputs.cache
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/obj/Debug/net6.0/Course.Service.AssemblyInfo.cs
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/obj/Debug/net6.0/Course.Service.csproj.CoreCompileInputs.cache
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/obj/Debug/net6.0/Course.Service.dll
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/obj/Debug/net6.0/refint/Course.Service.dll
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/obj/Debug/net6.0/Course.Service.pdb
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/obj/Debug/net6.0/ref/Course.Service.dll
+/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/obj/Debug/net6.0/Course.Service.csproj.CopyComplete
