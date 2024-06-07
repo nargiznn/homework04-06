@@ -1,30 +1,41 @@
 ﻿<Properties StartupConfiguration="{11D85175-89A8-4A75-BC9A-DE472B6D8407}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Course.API PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Course.API/Controllers/GroupsController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Course.API/appsettings.json">
     <Files>
-      <File FileName="Course.API/Controllers/GroupsController.cs" Line="59" Column="14" />
+      <File FileName="Course.API/Controllers/GroupsController.cs" Line="60" Column="10" />
+      <File FileName="Course.Service/Dtos/Group/GroupCreateDto.cs" Line="15" Column="77" />
+      <File FileName="Course.API/Program.cs" Line="24" Column="80" />
+      <File FileName="Course.Data/Configurations/GroupConfiguration.cs" Line="18" Column="1" />
+      <File FileName="Course.Data/AppDbContext.cs" Line="31" Column="1" />
+      <File FileName="Course.Data/Migrations/20240606140433_GroupsTableCreated.cs" Line="1" Column="1" />
+      <File FileName="Course.API/appsettings.json" Line="13" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Course.App" expanded="True">
-            <Node name="Course.API">
-              <Node name="Controllers" expanded="True">
-                <Node name="GroupsController.cs" selected="True" />
-              </Node>
+          <Node name="Course.App">
+            <Node name="Course.API" expanded="True">
+              <Node name="Controllers" expanded="True" />
             </Node>
-            <Node name="Course.Data">
+            <Node name="Course.Data" expanded="True">
+              <Node name="Configurations" expanded="True" />
               <Node name="Migrations" expanded="True" />
+            </Node>
+            <Node name="Course.Service" expanded="True">
+              <Node name="Dtos" expanded="True">
+                <Node name="Group" expanded="True" />
+              </Node>
+              <Node name="Services" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Course.API PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

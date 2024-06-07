@@ -220,4 +220,5 @@
 /Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.API/obj/Debug/net6.0/Course.API.pdb
 /Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.API/obj/Debug/net6.0/Course.API.genruntimeconfig.cache
 /Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.API/obj/Debug/net6.0/ref/Course.API.dll
-/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.API/obj/Debug/net6.0/Course.API.csproj.CopyComplete
+/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.API/obj/Debug/net6.0/Course.API.sourcelink.json
+/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.API/obj/Debug/net6.0/Course.API.csproj.Up2Date
