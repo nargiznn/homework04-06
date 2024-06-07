@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yK38mrwrUA8o15GRztXACCifiHH8FG1uUDuDeFq7HcoZDPPMJb2mQc4QdEaWHNQwYjsi5VntK9zE5JkW0Tx5PQ==",
+  "dgSpecHash": "4seKX55ac8EOR6RL/K/eJUmCqguccs2CaKHEGeZEwtDyCcKZL5LtKI+b3KQzaHz2Gm+ipoh3yLhgyeOAZBr+cQ==",
   "success": true,
-  "projectFilePath": "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Data/Course.Data.csproj",
+  "projectFilePath": "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.Data/Course.Data.csproj",
   "expectedPackageFiles": [
     "/Users/nergiznadirli/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",

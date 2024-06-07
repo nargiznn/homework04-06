@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/Course.API.csproj": {}
+    "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.API/Course.API.csproj": {}
   },
   "projects": {
-    "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/Course.API.csproj": {
+    "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.API/Course.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/Course.API.csproj",
+        "projectUniqueName": "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.API/Course.API.csproj",
         "projectName": "Course.API",
-        "projectPath": "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/Course.API.csproj",
+        "projectPath": "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.API/Course.API.csproj",
         "packagesPath": "/Users/nergiznadirli/.nuget/packages/",
-        "outputPath": "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.API/obj/",
+        "outputPath": "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nergiznadirli/.nuget/NuGet/NuGet.Config"
@@ -20,15 +20,14 @@
           "net6.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/sdk/7.0.315/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/Course.Service.csproj": {
-                "projectPath": "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/Course.Service.csproj"
+              "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.Service/Course.Service.csproj": {
+                "projectPath": "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.Service/Course.Service.csproj"
               }
             }
           }
@@ -37,6 +36,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -73,18 +77,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Core/Course.Core.csproj": {
+    "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.Core/Course.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Core/Course.Core.csproj",
+        "projectUniqueName": "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.Core/Course.Core.csproj",
         "projectName": "Course.Core",
-        "projectPath": "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Core/Course.Core.csproj",
+        "projectPath": "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.Core/Course.Core.csproj",
         "packagesPath": "/Users/nergiznadirli/.nuget/packages/",
-        "outputPath": "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Core/obj/",
+        "outputPath": "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nergiznadirli/.nuget/NuGet/NuGet.Config"
@@ -105,6 +109,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -126,18 +135,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Data/Course.Data.csproj": {
+    "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.Data/Course.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Data/Course.Data.csproj",
+        "projectUniqueName": "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.Data/Course.Data.csproj",
         "projectName": "Course.Data",
-        "projectPath": "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Data/Course.Data.csproj",
+        "projectPath": "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.Data/Course.Data.csproj",
         "packagesPath": "/Users/nergiznadirli/.nuget/packages/",
-        "outputPath": "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Data/obj/",
+        "outputPath": "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.Data/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nergiznadirli/.nuget/NuGet/NuGet.Config"
@@ -152,8 +161,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Core/Course.Core.csproj": {
-                "projectPath": "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Core/Course.Core.csproj"
+              "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.Core/Course.Core.csproj": {
+                "projectPath": "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.Core/Course.Core.csproj"
               }
             }
           }
@@ -162,6 +171,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -201,18 +215,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/Course.Service.csproj": {
+    "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.Service/Course.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/Course.Service.csproj",
+        "projectUniqueName": "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.Service/Course.Service.csproj",
         "projectName": "Course.Service",
-        "projectPath": "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/Course.Service.csproj",
+        "projectPath": "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.Service/Course.Service.csproj",
         "packagesPath": "/Users/nergiznadirli/.nuget/packages/",
-        "outputPath": "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/obj/",
+        "outputPath": "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.Service/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nergiznadirli/.nuget/NuGet/NuGet.Config"
@@ -227,8 +241,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Data/Course.Data.csproj": {
-                "projectPath": "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Data/Course.Data.csproj"
+              "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.Data/Course.Data.csproj": {
+                "projectPath": "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.Data/Course.Data.csproj"
               }
             }
           }
@@ -237,11 +251,22 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -258,7 +283,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/RuntimeIdentifierGraph.json"
         }
       }
     }

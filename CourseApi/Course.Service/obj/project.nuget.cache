@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "fJZnjii6XMYDj/OZF0eKAaPYiDkiRy6M+0qK3Z+3g/i6IKd1pnVT8z/X0cN6gA2acOLhY06A8vbYaML8i2j33Q==",
+  "dgSpecHash": "H50JQ19iQDe+tF4Q324mV86uUKApPJOVHyGxVPerI88E0wxw033j0B9h0iU2k92bdWE79xgdRTsCMBalcFKO+w==",
   "success": true,
-  "projectFilePath": "/Users/nergiznadirli/Desktop/APİ/04-06-24/CourseApi/Course.Service/Course.Service.csproj",
+  "projectFilePath": "/Users/nergiznadirli/Desktop/API/homeworkApi/CourseApi/Course.Service/Course.Service.csproj",
   "expectedPackageFiles": [
+    "/Users/nergiznadirli/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512",
+    "/Users/nergiznadirli/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "/Users/nergiznadirli/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.5.1/fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/microsoft.data.sqlclient/2.1.7/microsoft.data.sqlclient.2.1.7.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/microsoft.data.sqlclient.sni.runtime/2.1.1/microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
