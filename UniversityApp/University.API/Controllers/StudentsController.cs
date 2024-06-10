@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UniversityApi.Data.Entities;
 using UniversityApi.Models;
+using UniversityApp.Controllers;
 using UniversityApp.Service.Dtos.GroupDtos;
 using UniversityApp.Service.Dtos.StudentDtos;
 
@@ -13,10 +14,13 @@ namespace UniversityApi.Controllers
     public class StudentsController: ControllerBase
     {
         private readonly UniversityDbContext _dbContext;
+        private readonly ILogger<StudentsController> _logger;
 
-        public StudentsController(UniversityDbContext context)
+
+        public StudentsController(UniversityDbContext context, ILogger<StudentsController> logger)
         {
             _dbContext = context;
+            _logger = logger;
         }
 
 
@@ -24,6 +28,7 @@ namespace UniversityApi.Controllers
         [HttpGet("")]
         public ActionResult<List<StudentGetDto>> GetAll()
         {
+            _logger.LogInformation("Students executing...");
             List<StudentGetDto> dtos = _dbContext.Students.Where(x => !x.IsDeleted).Select(x => new StudentGetDto
             {
                 Id = x.Id,
