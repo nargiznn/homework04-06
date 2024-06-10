@@ -12,9 +12,15 @@ using UniversityApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using UniversityApp.Service.Exceptions;
 using University.API.Middlewares;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Logging.ClearProviders();
+var logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .Enrich.FromLogContext()
+    .CreateLogger();
+builder.Logging.AddSerilog(logger);
 // Add services to the container.
 
 builder.Services.AddControllers().ConfigureApiBehaviorOptions(options =>

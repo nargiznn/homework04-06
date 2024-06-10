@@ -21,15 +21,18 @@ namespace UniversityApp.Controllers
     public class GroupsController : ControllerBase
     {
         private readonly UniversityDbContext _dbContext;
+        private readonly ILogger<GroupsController> _logger;
 
-        public GroupsController(UniversityDbContext dbContext)
+        public GroupsController(UniversityDbContext dbContext,ILogger<GroupsController> logger)
         {
             _dbContext = dbContext;
+            _logger = logger;
         }
 
         [HttpGet("")]
         public ActionResult<List<GroupGetDto>> GetAll()
         {
+            _logger.LogInformation("Group executing...");
             List<GroupGetDto> dtos = _dbContext.Groups.Where(x => !x.IsDeleted).Select(x => new GroupGetDto
             {
                 Id = x.Id,
