@@ -22,13 +22,13 @@ namespace UniversityApp.Service.Implementations
             Group group = _context.Groups.Include(x => x.Students).FirstOrDefault(x => x.Id == createDto.GroupId && !x.IsDeleted);
 
             if (group == null)
-                throw new RestException(StatusCodes.Status404NotFound, "GroupId", "Group not found by given GroupId");
+                throw new RestException(StatusCodes.Status404NotFound, "GroupId", "Group not found");
 
             if (group.Limit <= group.Students.Count)
                 throw new RestException(StatusCodes.Status400BadRequest, "Group is full");
 
             if (_context.Students.Any(x => x.Email.ToUpper() == createDto.Email.ToUpper() && !x.IsDeleted))
-                throw new RestException(StatusCodes.Status400BadRequest, "Email", "Student already exists by given Email");
+                throw new RestException(StatusCodes.Status400BadRequest, "Email", "Student already exists");
             Student entity = new Student
             {
                 FullName = createDto.FullName,

@@ -11,6 +11,7 @@ using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
 using UniversityApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using UniversityApp.Service.Exceptions;
+using University.API.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -60,7 +61,15 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+app.UseMiddleware<LoggingMiddleware>();
 app.UseMiddleware<ExceptionHandlerMiddleware>();
+
+
+//app.UseRouting();
+//app.UseEndpoints(endpoints =>
+//{
+//    endpoints.MapControllers();
+//});
 
 app.Run();
 
