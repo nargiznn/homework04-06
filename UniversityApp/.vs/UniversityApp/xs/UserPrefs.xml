@@ -1,34 +1,35 @@
 ﻿<Properties StartupConfiguration="{F09B7A63-B0C2-433D-BB27-B80308D633AE}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="University.API/Middlewares/LogginMiddleware.cs">
-    <Files>
-      <File FileName="University.API/Middlewares/LogginMiddleware.cs" Line="18" Column="1" />
-      <File FileName="University.API/Middlewares/ExceptionHandlerMiddleware.cs" Line="8" Column="1" />
-      <File FileName="University.API/Program.cs" Line="68" Column="20" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="UniversityApp">
+          <Node name="UniversityApp" expanded="True">
             <Node name="University.API">
-              <Node name="Middlewares" expanded="True">
-                <Node name="LogginMiddleware.cs" selected="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="StudentsController.cs" selected="True" />
               </Node>
             </Node>
-            <Node name="UniversityApp.Core" expanded="True" />
-            <Node name="UniversityApp.Data" expanded="True" />
+            <Node name="UniversityApp.Core" expanded="True">
+              <Node name="Entities" expanded="True" />
+            </Node>
+            <Node name="UniversityApp.Data">
+              <Node name="Repositories" expanded="True" />
+            </Node>
+            <Node name="UniversityApp.Service">
+              <Node name="Dtos" expanded="True">
+                <Node name="StudentDtos" expanded="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.University.API PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.University.API PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
 </Properties>

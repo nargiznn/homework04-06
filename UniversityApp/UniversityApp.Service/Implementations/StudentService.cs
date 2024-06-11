@@ -5,6 +5,8 @@ using Microsoft.Extensions.Hosting;
 using University.Service.Interfaces;
 using UniversityApi.Data.Entities;
 using UniversityApi.Models;
+using UniversityApp.Data.Repositories;
+using UniversityApp.Data.Repositories.Interfaces;
 using UniversityApp.Service.Dtos.StudentDtos;
 using UniversityApp.Service.Exceptions;
 
@@ -13,13 +15,16 @@ namespace UniversityApp.Service.Implementations
 	public class StudentService: IStudentService
     {
         private readonly UniversityDbContext _context;
-        public StudentService(UniversityDbContext context)
+        private readonly IGroupRepository _groupRepository;
+        public StudentService(UniversityDbContext context,IGroupRepository groupRepository)
 		{
 			_context = context;
+            _groupRepository = groupRepository;
 		}
 		public int Create(StudentCreateDto createDto)
 		{
-            Group group = _context.Groups.Include(x => x.Students).FirstOrDefault(x => x.Id == createDto.GroupId && !x.IsDeleted);
+            //Group group = _context.Groups.Include(x => x.Students).FirstOrDefault(x => x.Id == createDto.GroupId && !x.IsDeleted);
+            Group group = _groupRepository.GetById(createDto.GroupId,false,"Students");
 
             if (group == null)
                 throw new RestException(StatusCodes.Status404NotFound, "GroupId", "Group not found");

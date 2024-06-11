@@ -123,7 +123,6 @@ namespace UniversityApi.Controllers
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
-    
             var student = _dbContext.Students.FirstOrDefault(x => x.Id == id && !x.IsDeleted);
             if (student == null)
             {

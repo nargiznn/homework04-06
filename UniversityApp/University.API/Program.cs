@@ -1,8 +1,6 @@
 ﻿using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using FluentValidation;
 using University.Api.Middlewares;
 using University.Service.Interfaces;
 using UniversityApp.Service.Dtos.GroupDtos;
@@ -13,6 +11,8 @@ using Microsoft.AspNetCore.Mvc;
 using UniversityApp.Service.Exceptions;
 using University.API.Middlewares;
 using Serilog;
+using UniversityApp.Data.Repositories.Interfaces;
+using UniversityApp.Data.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Logging.ClearProviders();
@@ -48,6 +48,7 @@ builder.Services.AddFluentValidationClientsideAdapters();
 builder.Services.AddValidatorsFromAssemblyContaining<GroupCreateDtoValidator>();
 
 builder.Services.AddScoped<IStudentService, StudentService>();
+builder.Services.AddScoped<IGroupRepository, GroupRepository>();
 
 builder.Services.AddFluentValidationRulesToSwagger();
 

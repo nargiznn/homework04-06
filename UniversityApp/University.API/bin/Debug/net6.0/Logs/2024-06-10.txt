@@ -49,3 +49,99 @@
 6/10/2024 1:27:05PM: 200 - https://localhost:7020/api/Groups
 [{"id":1,"no":"pb302","limit":15},{"id":2,"no":"pb303","limit":18}]
 
+6/10/2024 1:35:10PM: 200 - https://localhost:7020/api/Groups
+[{"id":1,"no":"pb302","limit":15},{"id":2,"no":"pb303","limit":18}]
+
+6/10/2024 1:35:52PM: 400 - https://localhost:7020/api/Groups
+{"message":"","errors":[{"key":"Limit","message":"'Limit' must be between 5 and 18. You entered 2."}]}
+
+6/10/2024 1:36:10PM: 409 - https://localhost:7020/api/Groups
+{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.8","title":"Conflict","status":409,"traceId":"00-6f688e48af9296eafea30e746c830a80-05f319ef0b1b8941-00"}
+
+6/10/2024 1:36:46PM: 201 - https://localhost:7020/api/Groups
+{"id":0}
+
+6/10/2024 1:37:02PM: 200 - https://localhost:7020/api/Groups
+[{"id":1,"no":"pb302","limit":15},{"id":2,"no":"pb303","limit":18},{"id":1002,"no":"Pb403","limit":5}]
+
+6/10/2024 1:37:14PM: 200 - https://localhost:7020/api/Groups/1002
+{"id":1002,"no":"Pb403","limit":5}
+
+6/10/2024 1:37:47PM: 409 - https://localhost:7020/api/Groups/1002
+{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.8","title":"Conflict","status":409,"traceId":"00-3f1e0843a1a44658957eeed655e8e748-913831359fd387fb-00"}
+
+6/10/2024 1:38:13PM: 200 - https://localhost:7020/api/Groups
+[{"id":1,"no":"pb302","limit":15},{"id":2,"no":"pb303","limit":18},{"id":1002,"no":"Pb403","limit":5}]
+
+6/10/2024 1:38:27PM: 204 - https://localhost:7020/api/Groups/1002
+
+
+6/10/2024 1:38:35PM: 200 - https://localhost:7020/api/Groups
+[{"id":1,"no":"pb302","limit":15},{"id":2,"no":"pb303","limit":18},{"id":1002,"no":"Pb404","limit":18}]
+
+6/10/2024 1:39:05PM: 400 - https://localhost:7020/api/Groups/1002
+{"message":"","errors":[{"key":"Limit","message":"'Limit' must be between 5 and 18. You entered 3."}]}
+
+6/10/2024 1:39:13PM: 204 - https://localhost:7020/api/Groups/1002
+
+
+6/10/2024 1:39:29PM: 204 - https://localhost:7020/api/Groups/1002
+
+
+6/10/2024 1:39:38PM: 200 - https://localhost:7020/api/Groups
+[{"id":1,"no":"pb302","limit":15},{"id":2,"no":"pb303","limit":18}]
+
+6/10/2024 1:40:23PM: 200 - https://localhost:7020/api/Groups/1
+{"id":1,"no":"pb302","limit":15}
+
+6/10/2024 1:40:27PM: 200 - https://localhost:7020/api/Groups/1
+{"id":1,"no":"pb302","limit":15}
+
+6/10/2024 1:40:42PM: 204 - https://localhost:7020/api/Groups/1
+
+
+6/10/2024 1:40:57PM: 200 - https://localhost:7020/api/Groups
+[{"id":1,"no":"Pb404","limit":5},{"id":2,"no":"pb303","limit":18}]
+
+6/10/2024 1:41:11PM: 200 - https://localhost:7020/api/Students
+[{"id":1,"groupId":1,"fullName":"Admin Adminov","email":"admin@gmail","birthDate":"2004-12-12T00:00:00","group":{"no":"Pb404","limit":5,"students":null,"createdAt":"2024-06-07T17:21:20.799093","modifiedAt":"2024-06-10T13:40:42.726345","isDeleted":false,"id":1}},{"id":2,"groupId":2,"fullName":"Admin Adminov","email":"admin1@gmail","birthDate":"2004-12-12T00:00:00","group":{"no":"pb303","limit":18,"students":null,"createdAt":"2024-06-07T17:24:04.476992","modifiedAt":"0001-01-01T00:00:00","isDeleted":false,"id":2}},{"id":3,"groupId":2,"fullName":"Admin Adminov","email":"admin3@gmail","birthDate":"2004-12-12T00:00:00","group":{"no":"pb303","limit":18,"students":null,"createdAt":"2024-06-07T17:24:04.476992","modifiedAt":"0001-01-01T00:00:00","isDeleted":false,"id":2}},{"id":4,"groupId":2,"fullName":"Admin Adminov","email":"admin5@gmail","birthDate":"2004-12-12T00:00:00","group":{"no":"pb303","limit":18,"students":null,"createdAt":"2024-06-07T17:24:04.476992","modifiedAt":"0001-01-01T00:00:00","isDeleted":false,"id":2}},{"id":5,"groupId":2,"fullName":"asdfg","email":"fvgbhj@fghjk","birthDate":"2004-12-12T00:00:00","group":{"no":"pb303","limit":18,"students":null,"createdAt":"2024-06-07T17:24:04.476992","modifiedAt":"0001-01-01T00:00:00","isDeleted":false,"id":2}}]
+
+6/10/2024 1:42:17PM: 400 - https://localhost:7020/api/Students
+{"message":"","errors":[{"key":"FullName","message":"FullName start with uppercase!"},{"key":"BirthDate.Date","message":"Student's age must be greator or equal than 15"}]}
+
+6/10/2024 1:42:27PM: 400 - https://localhost:7020/api/Students
+{"message":"","errors":[{"key":"BirthDate.Date","message":"Student's age must be greator or equal than 15"}]}
+
+6/10/2024 1:42:38PM: 400 - https://localhost:7020/api/Students
+{"GroupId":["Group not found by give GroupId"]}
+
+6/10/2024 1:43:14PM: 400 - https://localhost:7020/api/Students
+{"GroupId":["Group not found by give GroupId"]}
+
+6/10/2024 1:43:21PM: 400 - https://localhost:7020/api/Students
+{"Email":["Email already exists"]}
+
+6/10/2024 1:43:26PM: 201 - https://localhost:7020/api/Students
+{"id":1003}
+
+6/10/2024 1:43:49PM: 404 - https://localhost:7020/api/Students/1002
+{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.4","title":"Not Found","status":404,"traceId":"00-2b5d6eb0e7f4c1fcaaaf42bc8b705b21-dbba587c8ee099b4-00"}
+
+6/10/2024 1:44:00PM: 200 - https://localhost:7020/api/Students/1003
+{"id":1003,"groupId":2,"fullName":"Naraaa","email":"admin11@gmail","birthDate":"2004-06-10T09:42:00.383","group":null}
+
+6/10/2024 1:44:37PM: 204 - https://localhost:7020/api/Students/1003
+
+
+6/10/2024 1:44:55PM: 200 - https://localhost:7020/api/Students
+[{"id":1,"groupId":1,"fullName":"Admin Adminov","email":"admin@gmail","birthDate":"2004-12-12T00:00:00","group":{"no":"Pb404","limit":5,"students":null,"createdAt":"2024-06-07T17:21:20.799093","modifiedAt":"2024-06-10T13:40:42.726345","isDeleted":false,"id":1}},{"id":2,"groupId":2,"fullName":"Admin Adminov","email":"admin1@gmail","birthDate":"2004-12-12T00:00:00","group":{"no":"pb303","limit":18,"students":null,"createdAt":"2024-06-07T17:24:04.476992","modifiedAt":"0001-01-01T00:00:00","isDeleted":false,"id":2}},{"id":3,"groupId":2,"fullName":"Admin Adminov","email":"admin3@gmail","birthDate":"2004-12-12T00:00:00","group":{"no":"pb303","limit":18,"students":null,"createdAt":"2024-06-07T17:24:04.476992","modifiedAt":"0001-01-01T00:00:00","isDeleted":false,"id":2}},{"id":4,"groupId":2,"fullName":"Admin Adminov","email":"admin5@gmail","birthDate":"2004-12-12T00:00:00","group":{"no":"pb303","limit":18,"students":null,"createdAt":"2024-06-07T17:24:04.476992","modifiedAt":"0001-01-01T00:00:00","isDeleted":false,"id":2}},{"id":5,"groupId":2,"fullName":"asdfg","email":"fvgbhj@fghjk","birthDate":"2004-12-12T00:00:00","group":{"no":"pb303","limit":18,"students":null,"createdAt":"2024-06-07T17:24:04.476992","modifiedAt":"0001-01-01T00:00:00","isDeleted":false,"id":2}},{"id":1003,"groupId":2,"fullName":"Naraaa","email":"admin11@gmail","birthDate":"2004-06-10T09:42:00.383","group":{"no":"pb303","limit":18,"students":null,"createdAt":"2024-06-07T17:24:04.476992","modifiedAt":"0001-01-01T00:00:00","isDeleted":false,"id":2}}]
+
+6/10/2024 1:45:40PM: 204 - https://localhost:7020/api/Students/1003
+
+
+6/10/2024 1:46:26PM: 200 - https://localhost:7020/api/Students
+[{"id":1,"groupId":1,"fullName":"Admin Adminov","email":"admin@gmail","birthDate":"2004-12-12T00:00:00","group":{"no":"Pb404","limit":5,"students":null,"createdAt":"2024-06-07T17:21:20.799093","modifiedAt":"2024-06-10T13:40:42.726345","isDeleted":false,"id":1}},{"id":2,"groupId":2,"fullName":"Admin Adminov","email":"admin1@gmail","birthDate":"2004-12-12T00:00:00","group":{"no":"pb303","limit":18,"students":null,"createdAt":"2024-06-07T17:24:04.476992","modifiedAt":"0001-01-01T00:00:00","isDeleted":false,"id":2}},{"id":3,"groupId":2,"fullName":"Admin Adminov","email":"admin3@gmail","birthDate":"2004-12-12T00:00:00","group":{"no":"pb303","limit":18,"students":null,"createdAt":"2024-06-07T17:24:04.476992","modifiedAt":"0001-01-01T00:00:00","isDeleted":false,"id":2}},{"id":4,"groupId":2,"fullName":"Admin Adminov","email":"admin5@gmail","birthDate":"2004-12-12T00:00:00","group":{"no":"pb303","limit":18,"students":null,"createdAt":"2024-06-07T17:24:04.476992","modifiedAt":"0001-01-01T00:00:00","isDeleted":false,"id":2}},{"id":5,"groupId":2,"fullName":"asdfg","email":"fvgbhj@fghjk","birthDate":"2004-12-12T00:00:00","group":{"no":"pb303","limit":18,"students":null,"createdAt":"2024-06-07T17:24:04.476992","modifiedAt":"0001-01-01T00:00:00","isDeleted":false,"id":2}},{"id":1003,"groupId":2,"fullName":"Naraaa","email":"admin11@gmail","birthDate":"2004-06-10T09:42:00.383","group":{"no":"pb303","limit":18,"students":null,"createdAt":"2024-06-07T17:24:04.476992","modifiedAt":"0001-01-01T00:00:00","isDeleted":false,"id":2}}]
+
+6/10/2024 1:46:36PM: 500 - https://localhost:7020/api/Students/1003
+
+
