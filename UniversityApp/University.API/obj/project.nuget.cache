@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Jag00HKcoezyy9PNOFkzH+MQWK1btNZr74neAD+mYs/1hH5WI7vG+sbqlZh3X/Y35td0rOX6kxMgrYzX2Fdshw==",
+  "dgSpecHash": "8VoTjP2PiX8yWD3ABEy/vUQBlth0QKWu/U4pCctxT8GyNEkT1Jqelz+ZURjFnNstCe5pY/IhAdrSeP2zhiV6Pw==",
   "success": true,
   "projectFilePath": "/Users/nergiznadirli/Desktop/API/homeworkApi/UniversityApp/University.API/University.API.csproj",
   "expectedPackageFiles": [
+    "/Users/nergiznadirli/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
+    "/Users/nergiznadirli/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.5.1/fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
@@ -76,5 +78,16 @@
     "/Users/nergiznadirli/.nuget/packages/system.text.json/8.0.0/system.text.json.8.0.0.nupkg.sha512",
     "/Users/nergiznadirli/.nuget/packages/system.windows.extensions/4.7.0/system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1 requires AutoMapper (= 12.0.1) but version AutoMapper 13.0.1 was resolved.",
+      "libraryId": "AutoMapper",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

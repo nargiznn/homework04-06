@@ -58,12 +58,7 @@ namespace UniversityApp.Service.Implementations
         {
             Group entity = _groupRepository.Get(x => x.Id == id && !x.IsDeleted);
             if (entity == null) throw new RestException(StatusCodes.Status404NotFound, "Group not found");
-            return new GroupGetDto
-            {
-                Id = entity.Id,
-                No = entity.No,
-                Limit = entity.Limit
-            };
+            return GroupMapper.MapFromEntityToGetDto(entity);
         }
 
         public void Update(int id, GroupUpdateDto updateDto)

@@ -12,6 +12,7 @@ using UniversityApi.Data;
 using UniversityApp.Service.Dtos.GroupDtos;
 using UniversityApi.Data.Entities;
 using UniversityApp.Service.Interfaces;
+using AutoMapper;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -22,17 +23,18 @@ namespace UniversityApp.Controllers
     public class GroupsController : ControllerBase
     {
         private readonly IGroupService _groupService;
-
-        public GroupsController(IGroupService groupService)
+        private readonly IMapper _mapper;
+        public GroupsController(IGroupService groupService,IMapper mapper)
         {
             _groupService = groupService;
+            _mapper = mapper;
         }
 
         [HttpGet("")]
         public ActionResult<List<GroupGetDto>> GetAll()
         {
            
-            return StatusCode(200, _groupService.GetAll());
+            return Ok(groups.Select(group=>_groupService.Map<GroupGetDto>(group)));
         }
 
         [HttpGet("{id}")]

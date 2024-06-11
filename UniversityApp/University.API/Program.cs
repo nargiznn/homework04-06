@@ -11,8 +11,10 @@ using Microsoft.AspNetCore.Mvc;
 using UniversityApp.Service.Exceptions;
 using University.API.Middlewares;
 using Serilog;
+using AutoMapper;
 using UniversityApp.Data.Repositories.Interfaces;
 using UniversityApp.Data.Repositories;
+using University.API;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Logging.ClearProviders();
@@ -35,8 +37,7 @@ builder.Services.AddControllers().ConfigureApiBehaviorOptions(options =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
 
 builder.Services.AddDbContext<UniversityDbContext>(opt =>
 {
