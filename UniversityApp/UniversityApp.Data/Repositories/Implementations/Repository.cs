@@ -24,7 +24,7 @@ namespace UniversityApp.Data.Repositories.Implementations
             _context.Set<TEntity>().Remove(entity);
         }
 
-        public List<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate, params string[] includes)
+        public IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate, params string[] includes)
         {
             var query = _context.Set<TEntity>().AsQueryable();
             foreach (var item in includes)
@@ -32,7 +32,7 @@ namespace UniversityApp.Data.Repositories.Implementations
                 query = query.Include(item);
             }
 
-            return query.Where(predicate).ToList();
+            return query.Where(predicate);
         }
 
         public TEntity Get(Expression<Func<TEntity,bool>> predicate, params string[] includes)
@@ -49,6 +49,17 @@ namespace UniversityApp.Data.Repositories.Implementations
         public int Save()
         {
             return _context.SaveChanges();
+        }
+
+        public bool Exists(Expression<Func<TEntity, bool>> predicate, params string[] includes)
+        {
+            var query = _context.Set<TEntity>().AsQueryable();
+            foreach (var item in includes)
+            {
+                query = query.Include(item);
+            }
+
+            return query.Any(predicate);
         }
     }
 }

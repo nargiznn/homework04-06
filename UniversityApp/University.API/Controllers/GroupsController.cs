@@ -11,6 +11,7 @@ using UniversityApi.Models;
 using UniversityApi.Data;
 using UniversityApp.Service.Dtos.GroupDtos;
 using UniversityApi.Data.Entities;
+using UniversityApp.Service.Interfaces;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,81 +21,39 @@ namespace UniversityApp.Controllers
     [ApiController]
     public class GroupsController : ControllerBase
     {
-        private readonly UniversityDbContext _dbContext;
-        private readonly ILogger<GroupsController> _logger;
+        private readonly IGroupService _groupService;
 
-        public GroupsController(UniversityDbContext dbContext,ILogger<GroupsController> logger)
+        public GroupsController(IGroupService groupService)
         {
-            _dbContext = dbContext;
-            _logger = logger;
+            _groupService = groupService;
         }
 
         [HttpGet("")]
         public ActionResult<List<GroupGetDto>> GetAll()
         {
-            _logger.LogInformation("Group executing...");
-            List<GroupGetDto> dtos = _dbContext.Groups.Where(x => !x.IsDeleted).Select(x => new GroupGetDto
-            {
-                Id = x.Id,
-                No = x.No,
-                Limit = x.Limit
-            }).ToList();
-
-
-            return StatusCode(200, dtos);
+           
+            return StatusCode(200, _groupService.GetAll());
         }
 
         [HttpGet("{id}")]
         public ActionResult<GroupGetDto> GetById(int id)
         {
-            var data = _dbContext.Groups.FirstOrDefault(x => x.Id == id && !x.IsDeleted);
 
-            if (data == null)
-            {
-                return StatusCode(404);
-            }
-
-            GroupGetDto dto = new GroupGetDto
-            {
-                Id = data.Id,
-                No = data.No,
-                Limit = data.Limit
-            };
-            return StatusCode(200, dto);
+            return StatusCode(200, _groupService.GetById(id));
         }
 
 
         [HttpPost("")]
         public ActionResult Create(GroupCreateDto createDto)
         {
-            if (_dbContext.Groups.Any(x => x.No == createDto.No && !x.IsDeleted))  return StatusCode(409);
-            var entity = new Group
-            {
-                Limit = createDto.Limit,
-                No = createDto.No
-            };
-            _dbContext.Groups.Add(entity);
-            _dbContext.SaveChangesAsync();
-
-            return StatusCode(201, new { Id = entity.Id });
+           
+            return StatusCode(201, new { Id = _groupService.Create(createDto) });
         }
 
         [HttpPut("{id}")]
-        public ActionResult Update(int id, GroupUpdateDto updateDto)
+        public ActionResult Update([FromBody]int id,[FromBody] GroupUpdateDto updateDto)
         {
-            var group = _dbContext.Groups.FirstOrDefault(x => x.Id == id && !x.IsDeleted);
-            if (group == null)
-            {
-                return StatusCode(404);
-            }
-            if (group.No != updateDto.No && _dbContext.Groups.Any(x => x.No == updateDto.No && !x.IsDeleted))
-                return Conflict();
-
-
-            group.No = updateDto.No;
-            group.Limit = updateDto.Limit;
-            group.ModifiedAt = DateTime.Now;
-            _dbContext.SaveChangesAsync();
+            _groupService.Update(id, updateDto);
             return NoContent();
 
         }
@@ -102,13 +61,8 @@ namespace UniversityApp.Controllers
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
-            var group = _dbContext.Groups.FirstOrDefault(x => x.Id == id && !x.IsDeleted);
-            if (group == null)
-            {
-                return StatusCode(404);
-            }
-            group.IsDeleted = true;
-          _dbContext.SaveChanges();
+
+            _groupService.Delete(id);
             return NoContent();
 
         }

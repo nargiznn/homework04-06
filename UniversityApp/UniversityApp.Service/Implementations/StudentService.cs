@@ -24,7 +24,7 @@ namespace UniversityApp.Service.Implementations
 		public int Create(StudentCreateDto createDto)
 		{
             //Group group = _context.Groups.Include(x => x.Students).FirstOrDefault(x => x.Id == createDto.GroupId && !x.IsDeleted);
-            Group group = _groupRepository.GetById(createDto.GroupId,false,"Students");
+            Group group = _groupRepository.Get(x=>x.Id==createDto.GroupId && !x.IsDeleted,"Students");
 
             if (group == null)
                 throw new RestException(StatusCodes.Status404NotFound, "GroupId", "Group not found");
