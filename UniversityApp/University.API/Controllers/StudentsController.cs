@@ -1,11 +1,14 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using University.Service.Interfaces;
 using UniversityApi.Data.Entities;
 using UniversityApi.Models;
 using UniversityApp.Controllers;
 using UniversityApp.Service.Dtos.GroupDtos;
 using UniversityApp.Service.Dtos.StudentDtos;
+using UniversityApp.Service.Implementations;
+using UniversityApp.Service.Interfaces;
 
 namespace UniversityApi.Controllers
 {
@@ -13,124 +16,97 @@ namespace UniversityApi.Controllers
     [ApiController]
     public class StudentsController: ControllerBase
     {
-        private readonly UniversityDbContext _dbContext;
-        private readonly ILogger<StudentsController> _logger;
+        private readonly IStudentService _studentService;
 
-
-        public StudentsController(UniversityDbContext context, ILogger<StudentsController> logger)
+        public StudentsController(IStudentService studentService)
         {
-            _dbContext = context;
-            _logger = logger;
+            _studentService = studentService;
         }
-
-
 
         [HttpGet("")]
         public ActionResult<List<StudentGetDto>> GetAll()
         {
-            _logger.LogInformation("Students executing...");
-            List<StudentGetDto> dtos = _dbContext.Students.Where(x => !x.IsDeleted).Select(x => new StudentGetDto
-            {
-                Id = x.Id,
-                FullName=x.FullName,
-                Email=x.Email,
-                BirthDate=x.BirthDate,
-                GroupId=x.GroupId,
-                Group=x.Group
-            }).ToList();
-
-
-            return StatusCode(200, dtos);
+            return StatusCode(200, _studentService.GetAll());
         }
 
 
         [HttpGet("{id}")]
         public ActionResult<StudentGetDto> GetById(int id)
         {
-            var data = _dbContext.Students.FirstOrDefault(x => x.Id == id && !x.IsDeleted);
-
-            if (data == null)
-            {
-                return StatusCode(404);
-            }
-
-            StudentGetDto dto = new StudentGetDto
-            {
-                Id = data.Id,
-                FullName = data.FullName,
-                Email = data.Email,
-                BirthDate = data.BirthDate,
-                GroupId = data.GroupId,
-
-            };
-            return StatusCode(200, dto);
+            return StatusCode(200, _studentService.GetById(id));
         }
-
-
 
 
         [HttpPost("")]
         public ActionResult Create(StudentCreateDto createDto)
         {
-            Group group = _dbContext.Groups.Include(x => x.Students).FirstOrDefault(x => x.Id == createDto.GroupId && !x.IsDeleted);
-            if (group == null)
-            {
-                ModelState.AddModelError("GroupId", "Group not found by give GroupId");
-                return BadRequest(ModelState);
-            }
-            if (group.Limit <= group.Students.Count) return Conflict("Group is full");
-            if (_dbContext.Students.Any(x => x.Email.ToUpper() == createDto.Email.ToUpper() && !x.IsDeleted))
-            {
-                ModelState.AddModelError("Email", "Email already exists");
-                return BadRequest(ModelState);
-            }
 
-            Student entity = new Student
-            {
-                FullName = createDto.FullName,
-                Email = createDto.Email,
-                BirthDate = createDto.BirthDate,
-                GroupId = createDto.GroupId,
-            };
+            return StatusCode(201, new { Id = _studentService.Create(createDto) });
+            //Group group = _dbContext.Groups.Include(x => x.Students).FirstOrDefault(x => x.Id == createDto.GroupId && !x.IsDeleted);
+            //if (group == null)
+            //{
+            //    ModelState.AddModelError("GroupId", "Group not found by give GroupId");
+            //    return BadRequest(ModelState);
+            //}
+            //if (group.Limit <= group.Students.Count) return Conflict("Group is full");
+            //if (_dbContext.Students.Any(x => x.Email.ToUpper() == createDto.Email.ToUpper() && !x.IsDeleted))
+            //{
+            //    ModelState.AddModelError("Email", "Email already exists");
+            //    return BadRequest(ModelState);
+            //}
 
-            _dbContext.Students.Add(entity);
-            _dbContext.SaveChanges();
+            //Student entity = new Student
+            //{
+            //    FullName = createDto.FullName,
+            //    Email = createDto.Email,
+            //    BirthDate = createDto.BirthDate,
+            //    GroupId = createDto.GroupId,
+            //};
 
-            return Created(Request.Path, new { id = entity.Id });
+            //_dbContext.Students.Add(entity);
+            //_dbContext.SaveChanges();
+
+            //return Created(Request.Path, new { id = entity.Id });
 
         }
 
         [HttpPut("{id}")]
         public ActionResult Update(int id, StudentUpdateDto updateDto)
         {
-            var student = _dbContext.Students.FirstOrDefault(x => x.Id == id && !x.IsDeleted);
-            if (student == null)
-            {
-                return StatusCode(404);
-            }
-            if (student.Email != updateDto.Email && _dbContext.Students.Any(x => x.Email == updateDto.Email && !x.IsDeleted))
-                return Conflict();
-
-
-            student.GroupId = updateDto.GroupId;
-            student.FullName = updateDto.FullName;
-            student.BirthDate = updateDto.BirthDate;
-            student.ModifiedAt = DateTime.Now;
-            _dbContext.SaveChangesAsync();
+            _studentService.Update(id, updateDto);
             return NoContent();
+            //var student = _dbContext.Students.FirstOrDefault(x => x.Id == id && !x.IsDeleted);
+            //if (student == null)
+            //{
+            //    return StatusCode(404);
+            //}
+            //if (student.Email != updateDto.Email && _dbContext.Students.Any(x => x.Email == updateDto.Email && !x.IsDeleted))
+            //    return Conflict();
+
+
+            //student.GroupId = updateDto.GroupId;
+            //student.FullName = updateDto.FullName;
+            //student.BirthDate = updateDto.BirthDate;
+            //student.ModifiedAt = DateTime.Now;
+            //_dbContext.SaveChangesAsync();
+            //return NoContent();
         }
 
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
-            var student = _dbContext.Students.FirstOrDefault(x => x.Id == id && !x.IsDeleted);
-            if (student == null)
-            {
-                return NotFound();
-            }     
-            student.IsDeleted = true;
-            _dbContext.SaveChanges();
+
+            _studentService.Delete(id);
             return NoContent();
+
+            //var student = _dbContext.Students.FirstOrDefault(x => x.Id == id && !x.IsDeleted);
+            //if (student == null)
+            //{
+            //    return NotFound();
+            //}     
+            //student.IsDeleted = true;
+            //_dbContext.SaveChanges();
+            //return NoContent();
         }
 
 
