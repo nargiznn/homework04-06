@@ -1,4 +1,5 @@
 ﻿using System;
+using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
@@ -15,10 +16,12 @@ namespace UniversityApp.Service.Implementations
 {
     public class StudentService : IStudentService
     {
+        private readonly IMapper _mapper;
         private readonly IStudentRepository _studentRepository;
-        public StudentService(IStudentRepository studentRepository)
+        public StudentService(IStudentRepository studentRepository,IMapper mapper)
         {
             _studentRepository = studentRepository;
+            _mapper = mapper;
         }
         int IStudentService.Create(StudentCreateDto createDto)
         {
@@ -55,21 +58,15 @@ namespace UniversityApp.Service.Implementations
                 Id = x.Id,
                 Email=x.Email,
                 FullName=x.FullName,
-                BirthDate=x.BirthDate
+
             }).ToList();
         }
 
         StudentGetDto IStudentService.GetById(int id)
         {
             Student entity = _studentRepository.Get(x => x.Id == id && !x.IsDeleted);
-            if (entity == null) throw new RestException(StatusCodes.Status404NotFound, "Student not found");
-            return new StudentGetDto
-            {
-                Id = entity.Id,
-                Email = entity.Email,
-                FullName = entity.FullName,
-                BirthDate = entity.BirthDate
-            };
+            if (entity == null) throw new RestException(StatusCodes.Status404NotFound, "Student not found by given id");
+            return _mapper.Map<StudentGetDto>(entity);
         }
 
         void IStudentService.Update(int id, StudentUpdateDto updateDto)

@@ -1,0 +1,12 @@
+6/12/2024 9:21:14AM: 200 - https://localhost:7020/api/Students
+[]
+
+6/12/2024 9:22:11AM: 200 - https://localhost:7020/api/Students/3
+{"id":3,"groupId":2,"fullName":"Admin Adminov","email":"admin3@gmail","age":20,"group":null}
+
+6/12/2024 9:22:45AM: 200 - https://localhost:7020/api/Students/5
+{"id":5,"groupId":2,"fullName":"asdfg","email":"fvgbhj@fghjk","age":20,"group":null}
+
+6/12/2024 9:22:53AM: 200 - https://localhost:7020/api/Students/4
+{"id":4,"groupId":2,"fullName":"Admin Adminov","email":"admin5@gmail","age":19,"group":null}
+

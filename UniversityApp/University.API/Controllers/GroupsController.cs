@@ -33,8 +33,8 @@ namespace UniversityApp.Controllers
         [HttpGet("")]
         public ActionResult<List<GroupGetDto>> GetAll()
         {
-           
-            return Ok(groups.Select(group=>_groupService.Map<GroupGetDto>(group)));
+
+            return StatusCode(200, _groupService.GetAll());
         }
 
         [HttpGet("{id}")]
@@ -52,13 +52,13 @@ namespace UniversityApp.Controllers
             return StatusCode(201, new { Id = _groupService.Create(createDto) });
         }
 
-        [HttpPut("{id}")]
-        public ActionResult Update([FromBody]int id,[FromBody] GroupUpdateDto updateDto)
-        {
-            _groupService.Update(id, updateDto);
-            return NoContent();
+        //[HttpPut("{id}")]
+        //public ActionResult Update([FromBody]int id,[FromBody] GroupUpdateDto updateDto)
+        //{
+        //    _groupService.Update(id, updateDto);
+        //    return NoContent();
 
-        }
+        //}
 
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)

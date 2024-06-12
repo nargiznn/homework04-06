@@ -15,6 +15,9 @@ using AutoMapper;
 using UniversityApp.Data.Repositories.Interfaces;
 using UniversityApp.Data.Repositories;
 using University.API;
+using UniversityApp.Service.Profiles;
+using UniversityApp.Service.Interfaces;
+using UniversityApp.Data.Repositories.Implementations;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Logging.ClearProviders();
@@ -37,8 +40,12 @@ builder.Services.AddControllers().ConfigureApiBehaviorOptions(options =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
-
+builder.Services.AddHttpContextAccessor();
+//builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
+builder.Services.AddSingleton(provider => new MapperConfiguration(cfg =>
+{
+    cfg.AddProfile(new AutoMapperProfile(provider.GetService<IHttpContextAccessor>()));
+}).CreateMapper());
 builder.Services.AddDbContext<UniversityDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
@@ -48,8 +55,10 @@ builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddFluentValidationClientsideAdapters();
 builder.Services.AddValidatorsFromAssemblyContaining<GroupCreateDtoValidator>();
 
+builder.Services.AddScoped<IStudentRepository, StudentRepository>();
 builder.Services.AddScoped<IStudentService, StudentService>();
 builder.Services.AddScoped<IGroupRepository, GroupRepository>();
+builder.Services.AddScoped<IGroupService, GroupService>();
 
 builder.Services.AddFluentValidationRulesToSwagger();
 
@@ -65,7 +74,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
 
 app.MapControllers();

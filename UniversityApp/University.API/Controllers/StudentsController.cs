@@ -1,12 +1,15 @@
 ﻿using System;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using University.Service.Interfaces;
 using UniversityApi.Data.Entities;
 using UniversityApi.Models;
 using UniversityApp.Controllers;
+using UniversityApp.Data.Repositories.Interfaces;
 using UniversityApp.Service.Dtos.GroupDtos;
 using UniversityApp.Service.Dtos.StudentDtos;
+using UniversityApp.Service.Exceptions;
 using UniversityApp.Service.Implementations;
 using UniversityApp.Service.Interfaces;
 
@@ -16,11 +19,15 @@ namespace UniversityApi.Controllers
     [ApiController]
     public class StudentsController: ControllerBase
     {
+
+        private readonly IStudentRepository _studentRepository;
         private readonly IStudentService _studentService;
 
-        public StudentsController(IStudentService studentService)
+        public StudentsController(IStudentService studentService,IStudentRepository studentRepository)
         {
             _studentService = studentService;
+            _studentRepository = studentRepository;
+
         }
 
         [HttpGet("")]
@@ -33,7 +40,8 @@ namespace UniversityApi.Controllers
         [HttpGet("{id}")]
         public ActionResult<StudentGetDto> GetById(int id)
         {
-            return StatusCode(200, _studentService.GetById(id));
+            return Ok(_studentService.GetById(id));
+              //return StatusCode(200, _studentService.GetById(id));
         }
 
 
@@ -42,6 +50,7 @@ namespace UniversityApi.Controllers
         {
 
             return StatusCode(201, new { Id = _studentService.Create(createDto) });
+
             //Group group = _dbContext.Groups.Include(x => x.Students).FirstOrDefault(x => x.Id == createDto.GroupId && !x.IsDeleted);
             //if (group == null)
             //{
