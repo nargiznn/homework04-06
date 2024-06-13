@@ -13,7 +13,6 @@ namespace UniversityApp.Service.Dtos.StudentDtos
             public DateTime BirthDate { get; set; }
             public IFormFile File { get; set; }
 
-
         public class StudentCreateDtoValidator : AbstractValidator<StudentCreateDto>
         {
             public StudentCreateDtoValidator()

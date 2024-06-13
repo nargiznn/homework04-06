@@ -2,6 +2,7 @@
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using UniversityApi.Data.Entities;
+using UniversityApp.Core.Entities;
 
 namespace UniversityApi.Models
 {
@@ -13,6 +14,7 @@ namespace UniversityApi.Models
 		}
 		public DbSet<Group> Groups { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //modelBuilder.ApplyConfiguration<Group>(new GroupConfiguration());

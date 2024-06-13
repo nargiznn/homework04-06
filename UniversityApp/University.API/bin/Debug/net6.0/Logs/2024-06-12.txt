@@ -10,3 +10,9 @@
 6/12/2024 9:22:53AM: 200 - https://localhost:7020/api/Students/4
 {"id":4,"groupId":2,"fullName":"Admin Adminov","email":"admin5@gmail","age":19,"group":null}
 
+6/12/2024 12:51:54PM: 500 - https://localhost:7020/api/Auth/users
+{"message":"Unable to resolve service for type 'Microsoft.AspNetCore.Identity.UserManager`1[UniversityApp.Core.Entities.AppUser]' while attempting to activate 'University.API.Controllers.AuthController'.","errors":[]}
+
+6/12/2024 12:52:00PM: 500 - https://localhost:7020/api/Auth/users
+{"message":"Unable to resolve service for type 'Microsoft.AspNetCore.Identity.UserManager`1[UniversityApp.Core.Entities.AppUser]' while attempting to activate 'University.API.Controllers.AuthController'.","errors":[]}
+

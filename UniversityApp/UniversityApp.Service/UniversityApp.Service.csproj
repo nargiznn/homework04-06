@@ -16,8 +16,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Profiles\" />
+    <None Remove="Dtos\UserDtos\" />
+    <None Remove="Extentions\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Profiles\" />
+    <Folder Include="Dtos\UserDtos\" />
+    <Folder Include="Extentions\" />
   </ItemGroup>
 </Project>
